@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Multiplexage Fibre Optique </title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="fichier.css"/>
+    </head>
+    <body>
+
+        <section class="section0">
+            <h3> Quizz sur la technologie WDM fibre optique </h3>
+            <div class="options">
+                <ul>
+                    <li>1) Ce quizz vous permet de tester votre multiplexage en longuers d'ondes </li>
+                    <li>2) En fonction de votre type de WDM, répondez aux quizz puis confirmez votre réponse</li>                   
+                    <li>3) Lorsque vous avez terminé un tableau listant les valeurs des longueurs d'ondes résultantes vous est présenté</li>
+                    <li><u>Note:</u> Scrollez le tableau au besoin </li>
+                </ul>
+            </div>
+            <button id="button0">Commencer</button>
+        </section>
+
+        <section class="section1">
+            <h3> Quel type de WDM possèdez-vous ? </h3>
+            <div class="options">
+                <ul>
+                    <li>
+                        <input type="radio" id = 'a' name="answer" value="CWDM"/>
+                        <label for="a" id="a">CWDM</label>
+                    </li>
+                    <li>
+                        <input type="radio" id = 'b' name="answer" value="DWDM"/>
+                        <label for="b" id="b">DWDM</label>
+                    </li>                   
+                    <li>
+                        <input type="radio" id = 'c' name="answer" value="UWDM"/>
+                        <label for="c" id="c">UWDM</label>
+                    </li>
+                </ul>
+            </div>
+            <button id="button1">Valider</button>
+        </section>
+
+        <section class="section2">
+            <h3> Combien de longueurs d'ondes souhaitez-vous utiliser? </h3>
+            <div class="options2">
+                <ul>
+                    <li>
+                        <input type="range" id = 'd' name="answer2" oninput="this.nextElementSibling.value = this.value"/>
+                        <output id="output2"></output>
+                    </li>
+                </ul>
+            </div>
+            <button id="button2">Valider</button>
+        </section>
+
+        <section class="section3">
+            <h3> Sélectionnez votre espacement des canaux ? </h3>
+            <div class="options3">
+                <ul>
+                    <li>
+                        <input type="range" id = 'e' step="0.1" name="answer3" oninput="this.nextElementSibling.value = this.value"/>
+                        <output id="output3"></output> <span> nm (nanomètre) </span>
+                    </li>
+                </ul>
+            </div>
+            <button id="button3">Valider</button>
+        </section>
+
+        <section class="section4">
+            <h3> Choisissez une fenêtre spectrale de transmission ? </h3>
+            <div class="options4">
+                <ul>
+                    <li>
+                        <input type="range" id = 'f' name="answer4" oninput="this.nextElementSibling.value = this.value"/>
+                        <output id="output4"></output> <span> nm (nanomètre) </span>
+                    </li>
+                </ul>
+            </div>
+            <button id="button4">Valider</button>
+        </section>
+
+        <section class="section5">
+            <div>
+                <h3> Tableau des valeurs de longueurs d'onde (λ) </h3>
+            </div>
+            <div class="options5">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> λ </th>
+                            <th> Valeurs (en nanomètres) </th>
+                        </tr>
+                    </thead>
+                    <tbody class="element"></tbody>
+                </table>  
+            </div>
+            <button id="button5">Recommencer</button>
+        </section>
+    </body>
+    
+    <script src="script.js"></script>
+</html>
